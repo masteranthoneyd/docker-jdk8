@@ -1,1 +1,1 @@
-# oraclejdk8的Docker镜像
+# images for oraclejdk8
