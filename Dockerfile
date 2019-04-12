@@ -5,7 +5,7 @@ ARG HTTP_PROXY
 ENV TZ=${TZ:-"Asia/Shanghai"} http_proxy=${HTTP_PROXY} https_proxy=${HTTP_PROXY}
 RUN apk update && \
     apk add --no-cache && \
-    apk add curl bash tree tzdata && \
+    apk add curl bash tree tzdata busybox-extras && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone 
 ENV http_proxy=
