@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM frolvlad/alpine-oraclejre8:slim
 MAINTAINER ybd <yangbingdong1994@gmail.com>
 ARG TZ 
 ARG HTTP_PROXY
