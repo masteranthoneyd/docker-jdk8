@@ -1,9 +1,9 @@
-FROM frolvlad/alpine-oraclejre8:8.202.08-slim
-MAINTAINER ybd <yangbingdong1994@gmail.com>
-ARG TZ
-ENV TZ=${TZ:-"Asia/Shanghai"}
-RUN apk update && \
-    apk add --no-cache && \
-    apk add curl bash tree tzdata busybox-extras && \
-    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
-    echo $TZ > /etc/timezone
+FROM frolvlad/alpine-glibc:alpine-3.8
+
+MAINTAINER yangbingdong <yangbingdong1994@gmail.com>
+
+ADD jdk8.tar.gz /usr/local/
+COPY arthas-boot.jar /arthas-boot.jar
+
+ENV JAVA_HOME /usr/local/jdk1.8.0_211
+ENV PATH  ${PATH}:${JAVA_HOME}/bin
