@@ -1,5 +1,5 @@
 FROM frolvlad/alpine-oraclejre8:8.202.08-slim
-MAINTAINER ybd <yangbingdong1994@gmail.com>
+MAINTAINER yangbingdong <yangbingdong1994@gmail.com>
 ARG TZ
 ENV TZ=${TZ:-"Asia/Shanghai"}
 RUN apk update && \

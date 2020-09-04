@@ -1,1 +1,3 @@
-# images for oraclejdk8
+images for jdk8
+* oracle jdk
+* open jdk
