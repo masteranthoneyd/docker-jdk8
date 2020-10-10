@@ -7,3 +7,10 @@ RUN apk update && \
     apk add curl bash tree tzdata busybox-extras && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone
+
+EXPOSE 8080
+
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
